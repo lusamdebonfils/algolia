@@ -11,6 +11,10 @@
 |
 */
 
+use App\Person;
+
 Route::get('/', function () {
-    return view('welcome');
+    $people = Person::all();
+    return $people;
+    //return view('welcome');
 });
